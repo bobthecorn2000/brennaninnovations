@@ -19,6 +19,7 @@ li a:hover {
 }
 body {
     background-image: url("../images/blueprint.jpg");
+    background-size: auto;
     
 }
 .logo {
@@ -27,12 +28,15 @@ body {
 }
 h1 {
     color: white;
+    text-align: center;
 }
 h2 {
     color: white;
 }
 
-
+p {
+    text-align: center;
+}
 
 
 .topnav {
