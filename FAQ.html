@@ -1,0 +1,101 @@
+  <head>
+   <!-- modified menus from w3schools-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hud.css">
+      <script src="script/countdown.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Brennan Innovations</title>
+</head> 
+<body>
+    <div class="backdrop">
+    
+        <div class="topnav" id="myTopnav">
+  <img class="logo" src="images/brennan2000sfull.png" alt="brennan logo"  onclick="openhud()">
+            
+            
+            <div id="myhud" class="overlay">
+  
+  <div class="overlay-content">
+      <a href="index.html" class="closebtn" onclick="closehud()">&times;</a>
+      <h1>Believe in the Magic</h1>
+   <img id="magic" src="images/loreassets/retro_white.png" alt="brennan"> 
+     <h1>Break Free</h1>
+  </div>
+</div>
+            
+            
+            
+            <a class="toplinks" href="contact.html">Contact</a>
+            <a class="toplinks" href="FAQ.html">FAQ</a>
+            <a class="toplinks" href="index.html">Home</a>
+            
+            
+            
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div>
+    <h1 style="text-align: center" id="almost">Please stop asking us these things</h1>
+        
+   <button class="accordion">I think I might be trapped in the vitrified test chambers</button>
+<div class="panel">
+  <p>For legal reasons we have to say that your not. side note you may want to see a doctor about the high amounts of gasoline in your blood</p>
+</div>
+
+<button class="accordion">what is my purpose in this company</button>
+<div class="panel">
+  <p>He lives on through us<br>
+Born from darkness, born from lust<br>
+'Cause when we reach the end<br>
+We do it all over again<br>
+<br>
+<br>Follow me, we are children of the machine</p>
+</div>
+
+<button class="accordion">why don't you have a footer on this page</button>
+<div class="panel">
+  <p>the guy we hired won't do it unless we improve their working conditions. What do we look like, A CHARITY</p>
+</div>       
+        
+        
+        
+    </div>
+    <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  } 
+}
+</script>
+    
+    <script>
+function openhud() {
+  document.getElementById("myhud").style.width = "100%";
+}
+
+function closehud() {
+  document.getElementById("myhud").style.width = "0%";
+}
+</script>
+ <script>
+ var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+} </script>   
+    
+</body> 

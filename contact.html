@@ -1,0 +1,81 @@
+  <head>
+   
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+      <script src="script/countdown.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Brennan Innovations</title>
+</head> 
+<body>
+    <div class="backdrop">
+    
+        <div class="topnav" id="myTopnav">
+  <img class="logo" src="images/brennan2000sfull.png" alt="brennan logo">
+            <a class="toplinks" href="contact.html">Contact</a>
+            <a class="toplinks" href="FAQ.html">FAQ</a>
+            <a class="toplinks" href="index.html">Home</a>
+            
+            
+            
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div>
+        <div class="container">
+  <form >
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+
+    <label for="subject">Subject</label>
+    
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+    <label for="signup">signup for our newsletter</label>
+      <input type="checkbox" name="signup" checked id="signup">
+<br>
+    <input type="button" value="Submit" onclick="sub()">
+      
+  </form>
+        
+     </div>   
+        
+        
+    </div>
+        <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  } 
+}
+</script>
+<script> 
+    
+    const chaos = ["alastor","discord","akechi","chaos","darkorn","jevil","spamton","wilbur","death","loki","vox","joey"];
+    function sub() {
+        let chaosmode = false;
+        let fname = document.getElementById("fname").value.toString();
+       for (let i = 0; i < chaos.length; i++) {
+      if (fname.toLowerCase() == chaos[i]) {
+          chaosmode = true;
+          
+      }
+      }
+    if (chaosmode == false) {
+        alert("your response has been sent")
+    }     
+    
+    }
+       
+    
+    
+    </script>    
+</body>
