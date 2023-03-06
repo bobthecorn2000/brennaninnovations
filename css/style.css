@@ -19,6 +19,7 @@ li a:hover {
 }
 body {
  background-color: #111;
+   margin: 0px;
     
 }
 .logo {
@@ -98,4 +99,11 @@ p {
 .backdrop {
     background-image: url("../images/blueprint.jpg");
     background-size: auto;
+}
+footer {
+    overflow: hidden;
+      position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(to top, red, black 50%);
 }
