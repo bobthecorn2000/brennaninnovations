@@ -14,6 +14,7 @@
         <div class="topnav" id="myTopnav">
   <img class="logo" src="images/brennan2000sfull.png" alt="brennan logo">
             <a class="toplinks" href="contact.html">Contact</a>
+            <a class="toplinks" href="hours.html">Hours</a>
             <a class="toplinks" href="branding.html">Branding</a>
             <a class="toplinks" href="FAQ.html">FAQ</a>
             <a class="toplinks" href="index.html">Home</a>
@@ -25,12 +26,12 @@
         </a>
         </div>
         <div class="container">
-  <form >
+  <form action="contact.html" method="post">
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
 
     <label for="subject">Subject</label>
@@ -40,7 +41,7 @@
     <label for="signup">signup for our newsletter</label>
       <input type="checkbox" name="signup" checked id="signup">
 <br>
-    <input type="button" value="Submit" onclick="sub()">
+    <input type="Submit" value="Submit" onclick="sub()">
       
   </form>
         
@@ -58,12 +59,15 @@ function myFunction() {
   } 
 }
 </script>
+    <script src=totallynotfromthebook/slightlycrustyjquery.js></script>
 <script> 
     
     const chaos = ["alastor","discord","akechi","chaos","darkorn","jevil","spamton","wilbur","death","loki","vox","joey"];
-    function sub() {
+    function sub(event) {
         let chaosmode = false;
         let fname = document.getElementById("fname").value.toString();
+        let lname = $("#lname").val();
+        let subject = $("#subject").val();
        for (let i = 0; i < chaos.length; i++) {
       if (fname.toLowerCase() == chaos[i]) {
           chaosmode = true;
@@ -71,6 +75,8 @@ function myFunction() {
       }
       }
     if (chaosmode == false) {
+        if (fname.trim() != "" && lname.trim() != "" && subject.trim() != "")
+          event.preventDefault();  
         alert("your response has been sent")
     }     
     

@@ -47,7 +47,7 @@ const today = new Date();
             }
             
      }
-         rows += `<td>${date}</td>`;
+         rows += `<td>${date} + closed</td>`;
          if (date === lastDayofMonth) { 
             newline = day;
             while (newline < 6) {
